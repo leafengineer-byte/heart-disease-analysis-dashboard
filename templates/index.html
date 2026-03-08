@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heart Disease Analysis</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="navbar-brand-icon"></span>
+            Heart Disease Analysis
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="/dashboard">Dashboard</a>
+              <a class="nav-link" href="/story">Story</a>
+              <a class="nav-link" href="#about">About</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main class="content-wrapper">
+        <section class="hero container">
+          <div>
+            <div class="hero-badge">
+              <span class="hero-badge-dot"></span>
+              Real heart disease dataset · Tableau-powered analytics
+            </div>
+            <h1 class="hero-heading">Heart Disease Data Analysis</h1>
+            <p class="hero-subtitle">
+              Explore how age, gender, lifestyle habits, and clinical factors combine to shape
+              heart disease risk, and use interactive visualizations to uncover patterns across
+              populations.
+            </p>
+            <div class="hero-actions">
+              <a href="/dashboard" class="btn-primary-modern">
+                Explore Dashboard
+              </a>
+              <a href="/story" class="btn-outline-modern">
+                View Data Story
+              </a>
+            </div>
+            <div class="hero-meta">
+              <span><span class="hero-meta-dot"></span> Demographic &amp; lifestyle breakdowns</span>
+              <span><span class="hero-meta-dot"></span> Powered by Tableau Public</span>
+              <span><span class="hero-meta-dot"></span> Designed for analysts &amp; clinicians</span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <span>Risk Signal Overview</span>
+                <span class="hero-chip">Live cohort snapshot</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="mini-chart">
+                  <div class="mini-chart-bar"></div>
+                  <div class="mini-chart-bar"></div>
+                  <div class="mini-chart-bar"></div>
+                  <div class="mini-chart-bar"></div>
+                  <div class="mini-chart-bar"></div>
+                </div>
+                <div class="hero-stat-pill">
+                  <span>Estimated prevalence this sample</span>
+                  <strong>~ 27%</strong>
+                  of individuals in this dataset report some form of heart disease.
+                </div>
+              </div>
+            </div>
+            <div class="glow-orb"></div>
+          </div>
+        </section>
+
+        <section id="about" class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">About the project</div>
+              <h2 class="section-title">Why analyze heart disease data?</h2>
+            </div>
+            <p class="section-description">
+              Heart disease remains a leading cause of death worldwide. By studying demographic
+              and lifestyle patterns in real-world data, this project helps identify signals that
+              can guide earlier intervention, targeted education, and better resource allocation.
+            </p>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-7">
+              <div class="card-modern">
+                <div class="card-title">From raw survey data to insight</div>
+                <p class="card-text mb-1">
+                  The underlying dataset captures self-reported health status, behavioral habits,
+                  and socio-demographic variables. Using Tableau dashboards and stories, we turn
+                  these rows of data into visual narratives about who is most at risk—and why.
+                </p>
+                <p class="card-text">
+                  Analysts, students, and clinicians can use this site as a starting point to ask
+                  better questions about prevention, early detection, and lifestyle interventions.
+                </p>
+                <div class="about-pills">
+                  <span class="about-pill">Demographics: age, sex, income</span>
+                  <span class="about-pill">Lifestyle: activity, smoking, BMI</span>
+                  <span class="about-pill">Clinical flags: stroke, diabetes</span>
+                  <span class="about-pill">Perceived health &amp; mental health</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card-modern">
+                <div class="card-title mb-1">Key questions we explore</div>
+                <ul class="insights-list">
+                  <li>How does heart disease prevalence shift across age and gender?</li>
+                  <li>Which lifestyle factors appear most strongly associated with higher risk?</li>
+                  <li>Are there patterns that suggest opportunities for targeted prevention?</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Core capabilities</div>
+              <h2 class="section-title">Explore the data from multiple angles</h2>
+            </div>
+            <p class="section-description">
+              Navigate between the dashboard and story views to slice the data, drill into
+              distributions, and then walk through a guided narrative of the most important
+              patterns.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <div class="card-modern">
+              <div class="card-icon">📊</div>
+              <div class="card-title">Data Visualization</div>
+              <p class="card-text">
+                Clear visual encodings for prevalence, distributions, and relationships
+                between demographic and health variables.
+              </p>
+            </div>
+
+            <div class="card-modern">
+              <div class="card-icon">🧭</div>
+              <div class="card-title">Interactive Dashboard</div>
+              <p class="card-text">
+                Filter by demographic groups, toggle between views, and quickly compare
+                subsets of the population without writing a single query.
+              </p>
+            </div>
+
+            <div class="card-modern">
+              <div class="card-icon">👥</div>
+              <div class="card-title">Demographic Analysis</div>
+              <p class="card-text">
+                Break down heart disease outcomes by age, sex, and other demographic
+                indicators to reveal vulnerable groups.
+              </p>
+            </div>
+
+            <div class="card-modern">
+              <div class="card-icon">⚕️</div>
+              <div class="card-title">Lifestyle Risk Factors</div>
+              <p class="card-text">
+                Examine the association between heart disease and behaviors such as
+                physical activity, smoking, and BMI.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <div class="section-kicker">Dataset snapshot</div>
+              <h2 class="section-title">What this analysis is built on</h2>
+            </div>
+            <p class="section-description">
+              These headline metrics give a sense of the dataset scale. The live Tableau
+              views let you explore how these counts break down by key characteristics.
+            </p>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-label">Total records analyzed</div>
+              <div
+                class="stat-value"
+                data-counter-target="253680"
+              >
+                0
+              </div>
+              <div class="stat-tag">Unique individuals in the sample</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Heart disease cases</div>
+              <div
+                class="stat-value"
+                data-counter-target="68750"
+              >
+                0
+              </div>
+              <div class="stat-tag">Self-reported heart disease diagnoses</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Lifestyle factors studied</div>
+              <div
+                class="stat-value"
+                data-counter-target="8"
+              >
+                0
+              </div>
+              <div class="stat-tag">Activity, BMI, smoking, and more</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Heart Disease Analysis · Data visualization with Tableau Public
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
